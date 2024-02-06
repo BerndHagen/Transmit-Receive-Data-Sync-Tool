@@ -36,3 +36,25 @@ Designed in Visual Studio 2022, the Transmitter and Receiver applications are ve
    - Monitor the progress in the application's UI, where it will display status messages about the sending process.
 
 > **Note:** When the Receiver's Message Box displays File has been received, the file will be available at the save location.
+
+# Copyright
+
+This Transmit and Receive application is licensed under the [MIT License](LICENSE).
+
+**MIT License**
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense and/or sell copies of the Software, subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+2. Users of the Software should provide proper attribution to the original creator in their projects, documentation or any other materials that make use of this Software. Additionally, users should include a link to the original Repository created by me when providing attribution.
+
+3. The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
+
+For more details, please refer to the [MIT License](LICENSE).
+
+# Screenshots
+Before downloading either the Setup or Project folder for the Transmit-Receive Software, you can choose to preview its appearance via the screenshots presented below. These images showcase the visual aspects of both the applications. Please be aware that forthcoming updates may bring in additional features to further enrich the user experience.
+
+| Receiver Application               | Transmitter Application   |
+|------------------------------|------------------------------|
+| <img src="https://github.com/BerndHagen/Medio-YouTube-Converter/raw/main/img/v1.4.1-medio_dashboard.png" width="300px"> | <img src="https://github.com/BerndHagen/Medio-YouTube-Converter/raw/main/img/v1.4.1-medio_converter.png" width="300px"> | 
