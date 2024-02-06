@@ -53,7 +53,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 For more details, please refer to the [MIT License](LICENSE).
 
 # Screenshots
-Before downloading either the Setup or Project folder for the Transmit-Receive Software, you can choose to preview its appearance via the screenshots presented below. These images showcase the visual aspects of both the applications. Please be aware that forthcoming updates may bring in additional features to further enrich the user experience.
+Before downloading either the Setup or Project folder for the Transmit-Receive Software, you can choose to preview its appearance via the screenshots presented below. These images showcase the visual aspects of both the applications. Please be aware that forthcoming updates may bring in additional features.
 
 <details>
   <summary>Receiver Application</summary>
