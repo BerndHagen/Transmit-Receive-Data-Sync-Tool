@@ -1,4 +1,4 @@
-# Transmit-Receive - Data-Sync-Tool
+# Transmit/Receive - Data-Sync-Tool
 
 Transmit-Receive is a networked file transfer application suite developed in C# that employs the Transmission Control Protocol (TCP) for the reliable, ordered, and error-checked exchange of data between a Transmitter and a Receiver. This suite is designed to enable users to effortlessly send and receive files across a network, ensuring data integrity and security through TCP's robust communication standards. The Transmitter component allows users to select files for transfer and initiates the connection to the Receiver, which listens on a predefined port for incoming file transfers. Upon establishing a connection, the Transmitter sends the file, broken down into packets, to the Receiver. The Receiver then reconstructs these packets back into the original file, saving it to a designated directory.
 
