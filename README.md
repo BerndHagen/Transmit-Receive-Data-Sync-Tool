@@ -19,7 +19,7 @@ Designed in Visual Studio 2022, the Transmitter and Receiver applications are ve
 
 ### Receiving Files
 - The application continuously listens for incoming connections and files in the background.
-- When a file is received, its progress and completion status will be displayed in the application's UI, typically in a list or log view.
+- When a file is received, its progress and completion status will be displayed in the application's UI
 
 ### Application: Transmitter
 
