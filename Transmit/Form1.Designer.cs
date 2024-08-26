@@ -206,9 +206,9 @@
             this.git_description.ForeColor = System.Drawing.Color.DimGray;
             this.git_description.Location = new System.Drawing.Point(47, 26);
             this.git_description.Name = "git_description";
-            this.git_description.Size = new System.Drawing.Size(301, 13);
+            this.git_description.Size = new System.Drawing.Size(271, 13);
             this.git_description.TabIndex = 1;
-            this.git_description.Text = "The world’s leading AI-powered developer platform";
+            this.git_description.Text = "The Ultimate Platform for Global Development";
             this.git_description.Click += new System.EventHandler(this.label5_Click);
             // 
             // git_title

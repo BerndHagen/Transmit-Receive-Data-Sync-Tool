@@ -125,7 +125,7 @@
             this.git_description.Name = "git_description";
             this.git_description.Size = new System.Drawing.Size(301, 13);
             this.git_description.TabIndex = 2;
-            this.git_description.Text = "The world’s leading AI-powered developer platform";
+            this.git_description.Text = "The Ultimate Platform for Global Development";
             this.git_description.Click += new System.EventHandler(this.panel5_Click);
             // 
             // git_image
