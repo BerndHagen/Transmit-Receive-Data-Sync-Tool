@@ -16,6 +16,14 @@
 
 In order to use Transmit-Receive, ensure you have [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) or higher installed on your system. You can build and run the application using **Visual Studio 2022** or any compatible development environment.
 
+## Table of Contents
+
+1. [Getting Started](#getting-started)
+    - [Application: Receiver](#application-receiver)
+    - [Application: Transmitter](#application-transmitter)
+2. [Copyright](#copyright)
+3. [Screenshots](#screenshots)
+
 ## Getting Started
 
 ### Application: Receiver
