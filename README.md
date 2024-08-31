@@ -48,6 +48,8 @@ In order to use Transmit-Receive, ensure you have [.NET Framework 4.7.2](https:/
 
 After the Receiver displays the message **File has been received**, the file will be available in the selected save location.
 
+> **Important:** Make sure to run both applications as an administrator. Otherwise, Windows might block the file transfers, causing the applications not to work properly.
+
 # Copyright
 
 Transmit-Receive is licensed under the **MIT License**. You are granted permission, free of charge, to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this project and its associated documentation files, under the following conditions:
