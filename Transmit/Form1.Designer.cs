@@ -186,7 +186,7 @@
             this.git_backcolor.Name = "git_backcolor";
             this.git_backcolor.Size = new System.Drawing.Size(364, 48);
             this.git_backcolor.TabIndex = 0;
-            this.git_backcolor.Click += new System.EventHandler(this.label5_Click);
+            this.git_backcolor.Click += new System.EventHandler(this.git_description_Click);
             // 
             // git_image
             // 
@@ -197,7 +197,7 @@
             this.git_image.Name = "git_image";
             this.git_image.Size = new System.Drawing.Size(32, 32);
             this.git_image.TabIndex = 8;
-            this.git_image.Click += new System.EventHandler(this.label5_Click);
+            this.git_image.Click += new System.EventHandler(this.git_description_Click);
             // 
             // git_description
             // 
@@ -209,7 +209,7 @@
             this.git_description.Size = new System.Drawing.Size(271, 13);
             this.git_description.TabIndex = 1;
             this.git_description.Text = "The Ultimate Platform for Global Development";
-            this.git_description.Click += new System.EventHandler(this.label5_Click);
+            this.git_description.Click += new System.EventHandler(this.git_description_Click);
             // 
             // git_title
             // 
@@ -220,7 +220,7 @@
             this.git_title.Size = new System.Drawing.Size(224, 18);
             this.git_title.TabIndex = 0;
             this.git_title.Text = "Project\'s GitHub Repository";
-            this.git_title.Click += new System.EventHandler(this.label5_Click);
+            this.git_title.Click += new System.EventHandler(this.git_description_Click);
             // 
             // app_header
             // 
@@ -234,9 +234,9 @@
             this.app_header.Name = "app_header";
             this.app_header.Size = new System.Drawing.Size(386, 40);
             this.app_header.TabIndex = 4;
-            this.app_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseDown);
-            this.app_header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseMove);
-            this.app_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseUp);
+            this.app_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseDown);
+            this.app_header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseMove);
+            this.app_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseUp);
             // 
             // app_icon
             // 
@@ -246,9 +246,9 @@
             this.app_icon.Name = "app_icon";
             this.app_icon.Size = new System.Drawing.Size(20, 20);
             this.app_icon.TabIndex = 8;
-            this.app_icon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseDown);
-            this.app_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseMove);
-            this.app_icon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseUp);
+            this.app_icon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseDown);
+            this.app_icon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseMove);
+            this.app_icon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseUp);
             // 
             // app_title
             // 
@@ -260,9 +260,9 @@
             this.app_title.Size = new System.Drawing.Size(150, 18);
             this.app_title.TabIndex = 2;
             this.app_title.Text = "TRANSMITTER TX";
-            this.app_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseDown);
-            this.app_title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseMove);
-            this.app_title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_blue_MouseUp);
+            this.app_title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseDown);
+            this.app_title.MouseMove += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseMove);
+            this.app_title.MouseUp += new System.Windows.Forms.MouseEventHandler(this.app_header_MouseUp);
             // 
             // minimize_btn
             // 
@@ -275,9 +275,9 @@
             this.minimize_btn.Name = "minimize_btn";
             this.minimize_btn.Size = new System.Drawing.Size(25, 25);
             this.minimize_btn.TabIndex = 1;
-            this.minimize_btn.Click += new System.EventHandler(this.label2_Click);
-            this.minimize_btn.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
-            this.minimize_btn.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.minimize_btn.Click += new System.EventHandler(this.minimize_btn_Click);
+            this.minimize_btn.MouseEnter += new System.EventHandler(this.minimize_btn_MouseEnter);
+            this.minimize_btn.MouseLeave += new System.EventHandler(this.minimize_btn_MouseLeave);
             // 
             // minimize_icon
             // 
@@ -290,9 +290,9 @@
             this.minimize_icon.Size = new System.Drawing.Size(20, 25);
             this.minimize_icon.TabIndex = 1;
             this.minimize_icon.Text = "-";
-            this.minimize_icon.Click += new System.EventHandler(this.label2_Click);
-            this.minimize_icon.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
-            this.minimize_icon.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
+            this.minimize_icon.Click += new System.EventHandler(this.minimize_btn_Click);
+            this.minimize_icon.MouseEnter += new System.EventHandler(this.minimize_btn_MouseEnter);
+            this.minimize_icon.MouseLeave += new System.EventHandler(this.minimize_btn_MouseLeave);
             // 
             // close_btn
             // 
@@ -305,9 +305,9 @@
             this.close_btn.Name = "close_btn";
             this.close_btn.Size = new System.Drawing.Size(25, 25);
             this.close_btn.TabIndex = 0;
-            this.close_btn.Click += new System.EventHandler(this.panel3_Click);
-            this.close_btn.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
-            this.close_btn.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
+            this.close_btn.MouseEnter += new System.EventHandler(this.close_btn_MouseEnter);
+            this.close_btn.MouseLeave += new System.EventHandler(this.close_btn_MouseLeave);
             // 
             // close_icon
             // 
@@ -318,9 +318,9 @@
             this.close_icon.Size = new System.Drawing.Size(19, 13);
             this.close_icon.TabIndex = 1;
             this.close_icon.Text = "✖";
-            this.close_icon.Click += new System.EventHandler(this.panel3_Click);
-            this.close_icon.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
-            this.close_icon.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
+            this.close_icon.Click += new System.EventHandler(this.close_btn_Click);
+            this.close_icon.MouseEnter += new System.EventHandler(this.close_btn_MouseEnter);
+            this.close_icon.MouseLeave += new System.EventHandler(this.close_btn_MouseLeave);
             // 
             // Form1
             // 
@@ -336,6 +336,7 @@
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "Transmit";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.app_background.ResumeLayout(false);
             this.msg_bordercolor.ResumeLayout(false);
             this.browse_bordercolor.ResumeLayout(false);

@@ -20,13 +20,13 @@ namespace Receive
         private Point dragFormPoint;
         private readonly string _placeholderText = "Select a Path ...";
 
-        // Initializes Components
+        // Initialize form and set placeholder text
         public Form1()
         {
             InitializeComponent();
         }
 
-        // Load IP and start listener thread
+        // Load images and initialize components
         private void Form1_Load(object sender, EventArgs e)
         {
             git_image.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "github.png"));
@@ -35,7 +35,7 @@ namespace Receive
             SetPlaceholder();
         }
 
-        // Set color and text for TextBox
+        // Set placeholder text and color in textbox
         private void SetPlaceholder()
         {
             if (string.IsNullOrWhiteSpace(path_txtbox.Text))
@@ -45,7 +45,7 @@ namespace Receive
             }
         }
 
-        // Start TCP listener thread
+        // Create and start listener thread
         private void StartListenerThread()
         {
             Thread listenerThread = new Thread(ListenForClients)
@@ -55,7 +55,7 @@ namespace Receive
             listenerThread.Start();
         }
 
-        // Listen for and handle client connections
+        // Continuously listen for incoming client connections
         private void ListenForClients()
         {
             TcpListener listener = new TcpListener(IPAddress.Any, Port);
@@ -85,7 +85,7 @@ namespace Receive
             }
         }
 
-        // Handle client data transfer
+        // Handle data transfer for connected clients
         private void HandleClientCommunication()
         {
             TcpClient clientSocket;
@@ -132,7 +132,7 @@ namespace Receive
             clientSocket.Close();
         }
 
-        // Update UI with connection status
+        // Display client connection status in UI
         private void UpdateConnectionStatus(TcpClient client)
         {
             if (msg_list.InvokeRequired)
@@ -149,7 +149,7 @@ namespace Receive
             }
         }
 
-        // Update UI with transfer status
+        // Update UI with file transfer status
         private void UpdateTransferStatus(string statusMessage)
         {
             if (msg_list.InvokeRequired)
@@ -161,38 +161,8 @@ namespace Receive
             }
         }
 
-        // Exits the application
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        // Initiates window drag
-        private void panel_blue_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            dragCursorPoint = Cursor.Position;
-            dragFormPoint = this.Location;
-        }
-
-        // Drags the window
-        private void panel_blue_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point diff = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                this.Location = Point.Add(dragFormPoint, new Size(diff));
-            }
-        }
-
-        // Ends window drag
-        private void panel_blue_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
-        // Opens folder selection dialog
-        private void label3_Click(object sender, EventArgs e)
+        // Handle file selection and initiate sending
+        private void btnOpen_Click(object sender, EventArgs e)
         {
             using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
             {
@@ -204,38 +174,68 @@ namespace Receive
             }
         }
 
-        // Highlights label on mouse enter
-        private void label1_MouseEnter(object sender, EventArgs e)
+        // Exit the application when close panel clicked
+        private void close_btn_Click(object sender, EventArgs e)
         {
-            close_btn.BackColor = Color.FromArgb(143, 92, 96);
+            Application.Exit();
         }
 
-        // Restores label color on leave
-        private void label1_MouseLeave(object sender, EventArgs e)
+        // Change close button color on hover
+        private void close_btn_MouseEnter(object sender, EventArgs e)
         {
             close_btn.BackColor = Color.FromArgb(131, 74, 79);
         }
 
-        // Highlights panel on mouse enter
-        private void panel8_MouseEnter(object sender, EventArgs e)
+        // Restore close button color on leave
+        private void close_btn_MouseLeave(object sender, EventArgs e)
         {
-            minimize_btn.BackColor = Color.FromArgb(143, 92, 96);
+            close_btn.BackColor = Color.FromArgb(143, 92, 96);
         }
 
-        // Restores panel color on leave
-        private void panel8_MouseLeave(object sender, EventArgs e)
-        {
-            minimize_btn.BackColor = Color.FromArgb(131, 74, 79);
-        }
-
-        // Minimizes the window
-        private void panel8_Click(object sender, EventArgs e)
+        // Minimize window when minimize button clicked
+        private void minimize_btn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        // Opens project GitHub page
-        private void panel5_Click(object sender, EventArgs e)
+        // Change minimize button color on hover
+        private void minimize_btn_MouseEnter(object sender, EventArgs e)
+        {
+            minimize_btn.BackColor = Color.FromArgb(143, 92, 96);
+        }
+
+        // Restore minimize button color on leave
+        private void minimize_btn_MouseLeave(object sender, EventArgs e)
+        {
+            minimize_btn.BackColor = Color.FromArgb(131, 74, 79);
+        }
+
+        // Start dragging window on mouse down
+        private void app_header_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        // Drag window based on cursor movement
+        private void app_header_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point diff = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(diff));
+            }
+        }
+
+        // Stop dragging window on mouse release
+        private void app_header_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        // Open GitHub project page in browser
+        private void git_description_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/BerndHagen/Transmit-Receive");
         }
